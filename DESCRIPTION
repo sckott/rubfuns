@@ -1,0 +1,15 @@
+Package: rubfuns
+Title: Some Functions
+Description: Some Functions.
+Version: 0.0.1.9111
+Author: Scott Chamberlain [aut, cre]
+Maintainer: Scott Chamberlain <myrmecocystus+r@gmail.com>
+License: MIT + file LICENSE
+URL: https://github.com/ropenscilabs/rubfuns
+BugReports: https://github.com/ropenscilabs/rubfuns/issues
+Roxygen: list(markdown = TRUE)
+Imports:
+    magrittr
+Suggests:
+    testthat
+RoxygenNote: 6.0.1

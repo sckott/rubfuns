@@ -1,0 +1,42 @@
+rubfuns
+=======
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+[![Build Status](https://travis-ci.org/ropenscilabs/rubfuns.svg?branch=master)](https://travis-ci.org/ropenscilabs/rubfuns)
+
+
+`rubfuns` is a bunch of fxns inspired from Ruby
+
+## Installation
+
+Development version
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github("ropenscilabs/rubfuns")
+```
+
+```{r}
+library('rubfuns')
+```
+
+Package API:
+
+```{r echo=FALSE, results="asis"}
+cat(paste(" -", paste(getNamespaceExports("rubfuns"), collapse = "\n - ")))
+```
+
+## Meta
+
+* License: MIT
+* Get citation information for `rubfuns` in R doing `citation(package = 'rubfuns')`
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By participating in this project you agree to abide by its terms.
