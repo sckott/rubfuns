@@ -34,6 +34,57 @@ Package API:
 cat(paste(" -", paste(getNamespaceExports("rubfuns"), collapse = "\n - ")))
 ```
 
+## examples
+
+`take_while`
+
+```{r}
+x <- c(1, 2, 3, 4, 5, 0)
+x %>% take_while(function(z) z < 3)
+x <- c(1, 2, 3, 4, 9, -1)
+x %>% take_while(function(z) z < 3)
+```
+
+`drop_while`
+
+```{r}
+x <- c(1, 2, 3, 4, 5, 0)
+x %>% drop_while(function(z) z < 3)
+x <- c(1, 2, 3, 4, 9, -1)
+x %>% drop_while(function(z) z < 3)
+```
+
+`delete_at`
+
+```{r}
+x <- c(1, 2, 3, 4, 5, 0)
+delete_at(x, 5)
+delete_at(x, 4:5)
+```
+
+`delete_if`
+
+```{r}
+x <- c(1, 2, 3, 4, 5, 0)
+delete_if(x, function(z) z > 2)
+delete_if(x, function(z) z < 4)
+```
+
+`shift`
+
+```{r}
+x <- c(1, 2, 3)
+x %>% shift
+x %>% shift(1)
+```
+
+`unshift`
+
+```{r}
+x <- c(1, 2, 3)
+x %>% unshift(4)
+```
+
 ## Meta
 
 * License: MIT

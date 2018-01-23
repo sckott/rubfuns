@@ -3,6 +3,7 @@
 export("%>%")
 export(delete_at)
 export(delete_if)
+export(drop_while)
 export(shift)
 export(take_while)
 export(unshift)

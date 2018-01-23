@@ -30,7 +30,76 @@ Package API:
  - shift
  - delete_at
  - unshift
+ - drop_while
  - delete_if
+
+## examples
+
+`take_while`
+
+
+```r
+x <- c(1, 2, 3, 4, 5, 0)
+x %>% take_while(function(z) z < 3)
+#> [1] 1 2 0
+x <- c(1, 2, 3, 4, 9, -1)
+x %>% take_while(function(z) z < 3)
+#> [1]  1  2 -1
+```
+
+`drop_while`
+
+
+```r
+x <- c(1, 2, 3, 4, 5, 0)
+x %>% drop_while(function(z) z < 3)
+#> [1] 3 4 5
+x <- c(1, 2, 3, 4, 9, -1)
+x %>% drop_while(function(z) z < 3)
+#> [1] 3 4 9
+```
+
+`delete_at`
+
+
+```r
+x <- c(1, 2, 3, 4, 5, 0)
+delete_at(x, 5)
+#> [1] 1 2 3 4 0
+delete_at(x, 4:5)
+#> [1] 1 2 3 0
+```
+
+`delete_if`
+
+
+```r
+x <- c(1, 2, 3, 4, 5, 0)
+delete_if(x, function(z) z > 2)
+#> [1] 1 2 0
+delete_if(x, function(z) z < 4)
+#> [1] 4 5
+```
+
+`shift`
+
+
+```r
+x <- c(1, 2, 3)
+x %>% shift
+#> [1] 2 3
+x %>% shift(1)
+#> [1] 2 3
+```
+
+`unshift`
+
+
+```r
+x <- c(1, 2, 3)
+x %>% unshift(4)
+#> [1] 4 1 2 3
+```
 
 ## Meta
 

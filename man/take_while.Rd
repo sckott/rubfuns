@@ -2,28 +2,31 @@
 % Please edit documentation in R/take_while.R
 \name{take_while}
 \alias{take_while}
+\alias{drop_while}
 \title{Take while fun evaluates to TRUE}
 \usage{
 take_while(x, fun)
+
+drop_while(x, fun)
 }
 \arguments{
-\item{x}{xxxxx}
+\item{x}{(list/vector) a list or vector}
 
-\item{fun}{any function - has to yield a boolean}
+\item{fun}{(function) any function - has to yield a boolean}
 }
 \description{
 Take while fun evaluates to TRUE
 }
 \examples{
-# a = [1, 2, 3, 4, 5, 0]
-# a.take_while {|i| i < 3 }   #=> [1, 2]
-
+# take while
 x <- c(1, 2, 3, 4, 5, 0)
-take_while(x, function(z) z < 3)
-
+x \%>\% take_while(function(z) z < 3)
 x <- c(1, 2, 3, 4, 9, -1)
-take_while(x, function(z) z < 3)
+x \%>\% take_while(function(z) z < 3)
 
-x <- c(1, 2, 3, 4, 9)
-take_while(x, function(z) z < 3) \%>\% sqrt
+# drop while
+x <- c(1, 2, 3, 4, 5, 0)
+x \%>\% drop_while(function(z) z < 3)
+x <- c(1, 2, 3, 4, 9, -1)
+x \%>\% drop_while(function(z) z < 3)
 }
