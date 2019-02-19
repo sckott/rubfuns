@@ -20,13 +20,13 @@ Take while fun evaluates to TRUE
 \examples{
 # take while
 x <- c(1, 2, 3, 4, 5, 0)
-x \%>\% take_while(function(z) z < 3)
+take_while(x, function(z) z < 3)
 x <- c(1, 2, 3, 4, 9, -1)
-x \%>\% take_while(function(z) z < 3)
+take_while(x, function(z) z < 3)
 
 # drop while
 x <- c(1, 2, 3, 4, 5, 0)
-x \%>\% drop_while(function(z) z < 3)
+drop_while(x, function(z) z < 3)
 x <- c(1, 2, 3, 4, 9, -1)
-x \%>\% drop_while(function(z) z < 3)
+drop_while(x, function(z) z < 3)
 }

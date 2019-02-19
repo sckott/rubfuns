@@ -40,18 +40,18 @@ cat(paste(" -", paste(getNamespaceExports("rubfuns"), collapse = "\n - ")))
 
 ```{r}
 x <- c(1, 2, 3, 4, 5, 0)
-x %>% take_while(function(z) z < 3)
+take_while(x, function(z) z < 3)
 x <- c(1, 2, 3, 4, 9, -1)
-x %>% take_while(function(z) z < 3)
+take_while(x, function(z) z < 3)
 ```
 
 `drop_while`
 
 ```{r}
 x <- c(1, 2, 3, 4, 5, 0)
-x %>% drop_while(function(z) z < 3)
+drop_while(x, function(z) z < 3)
 x <- c(1, 2, 3, 4, 9, -1)
-x %>% drop_while(function(z) z < 3)
+drop_while(x, function(z) z < 3)
 ```
 
 `delete_at`
@@ -74,15 +74,15 @@ delete_if(x, function(z) z < 4)
 
 ```{r}
 x <- c(1, 2, 3)
-x %>% shift
-x %>% shift(1)
+shift(x)
+shift(x, 1)
 ```
 
 `unshift`
 
 ```{r}
 x <- c(1, 2, 3)
-x %>% unshift(4)
+unshift(x, 4)
 ```
 
 ## Meta

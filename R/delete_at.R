@@ -2,7 +2,7 @@
 #' 
 #' @export
 #' @param x vector/list
-#' @param at integer/numeric
+#' @param y integer/numeric
 #' @examples
 #' x <- c(1, 2, 3, 4, 5, 0)
 #' delete_at(x, 5)

@@ -21,12 +21,12 @@
 #' @examples
 #' # shift
 #' x <- c(1, 2, 3)
-#' x %>% shift
-#' x %>% shift(1)
+#' shift(x)
+#' shift(x, 1)
 #' 
 #' # unshift
 #' x <- c(1, 2, 3)
-#' x %>% unshift(4)
+#' unshift(x, 4)
 shift <- function(x, y = NULL) {
   if (is.null(y)) return(x[-1])
   stopifnot(length(y) == 1)

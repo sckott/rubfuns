@@ -9,7 +9,7 @@ delete_at(x, y)
 \arguments{
 \item{x}{vector/list}
 
-\item{at}{integer/numeric}
+\item{y}{integer/numeric}
 }
 \description{
 Delete at position(s)
