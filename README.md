@@ -25,7 +25,6 @@ library('rubfuns')
 
 Package API:
 
- - %>%
  - take_while
  - shift
  - delete_at
@@ -40,10 +39,10 @@ Package API:
 
 ```r
 x <- c(1, 2, 3, 4, 5, 0)
-x %>% take_while(function(z) z < 3)
+take_while(x, function(z) z < 3)
 #> [1] 1 2 0
 x <- c(1, 2, 3, 4, 9, -1)
-x %>% take_while(function(z) z < 3)
+take_while(x, function(z) z < 3)
 #> [1]  1  2 -1
 ```
 
@@ -52,10 +51,10 @@ x %>% take_while(function(z) z < 3)
 
 ```r
 x <- c(1, 2, 3, 4, 5, 0)
-x %>% drop_while(function(z) z < 3)
+drop_while(x, function(z) z < 3)
 #> [1] 3 4 5
 x <- c(1, 2, 3, 4, 9, -1)
-x %>% drop_while(function(z) z < 3)
+drop_while(x, function(z) z < 3)
 #> [1] 3 4 9
 ```
 
@@ -86,9 +85,9 @@ delete_if(x, function(z) z < 4)
 
 ```r
 x <- c(1, 2, 3)
-x %>% shift
+shift(x)
 #> [1] 2 3
-x %>% shift(1)
+shift(x, 1)
 #> [1] 2 3
 ```
 
@@ -97,7 +96,7 @@ x %>% shift(1)
 
 ```r
 x <- c(1, 2, 3)
-x %>% unshift(4)
+unshift(x, 4)
 #> [1] 4 1 2 3
 ```
 
